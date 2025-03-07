@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#tooltip {
+    position: absolute;
+    display: none;
+    background: #fff;
+    box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px;
+    min-width: 160px;
+    transform: translate(-5px, calc(-100% - 5px));
+    color: #333;
+}
+
+body {
+    background: rgb(222, 222, 222);
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 1fr 3fr 8fr;
+    grid-template-areas:
+        "info info info"
+        "hist-a scatter hist-b"
+        "map map map";
+    gap: 5px;
+
+    section {
+        background: rgb(240, 240, 240);
+
+        .title-container {
+            margin-top: 10px;
+            font-size: 12px;
+            color: white;
+            background: rgb(24, 86, 137);
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    section#info-container {
+        a {
+            height: 14px;
+            color: #de754c;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 20px 5px 20px;
+
+        .left {
+            flex: 1
+        }
+
+        .right {
+            flex: 1;
+
+            .credit {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+            }
+            
+        }
+    }
+
+
+    section.chart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title-container {
+            margin-top: 10px;
+            padding-right: 10px;
+
+            .slot {
+                font-size: 12px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                border-radius: 40px;
+                padding: 0px 10px 0px 10px;
+            }
+        }
+    }
+
+    section#maps {
+        grid-area: map;
+
+        display: flex;
+        flex-direction: column;
+
+        #choropleth-maps {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 100%;
+
+            .map-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .title-container {
+                    overflow: hidden;
+                    padding-right: 10px;
+                    width: max-content;
+
+
+                    .dropdown-arrow {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: #4682b4;
+                        height: 30px;
+                        width: 30px;
+                        font-size: 0.8em;
+                        border-top-left-radius: 40px;
+                        border-bottom-left-radius: 40px;
+                    }
+
+                    select {
+                        font-family: 'Josefin Sans', sans-serif;
+                        outline: none;
+                        border: none;
+                        appearance: none;
+                        width: min-content;
+                        text-align: center;
+                        height: 30px;
+                        cursor: pointer;
+                        border-top-right-radius: 40px;
+                        border-bottom-right-radius: 40px;
+                        padding-right: 10px;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#info-container {
+    grid-area: info;
+}
+
+#scatter-container {
+    grid-area: scatter;
+}
+
+#histogram-container-a {
+    grid-area: hist-a;
+}
+
+#histogram-container-b {
+    grid-area: hist-b;
+}

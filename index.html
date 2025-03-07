@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Education & Healthcare Insurance in US Counties</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="tooltip"></div>
+
+    <!-- Row 1 -->
+    <section id="info-container">
+        <div class="left">
+            <h1>Education & Healthcare Insurance in US Counties</h1>
+            <div>
+                By
+                <span>
+                    <a href="https://github.com/nam-k-nguyen">Nam Khanh Nguyen</a>
+                </span>
+                | Project Repo
+                <span>
+                    <a href="https://github.com/nam-k-nguyen">GitHub</a>
+                </span>
+            </div>
+        </div>
+        <div class="right">
+            <div>Map source: <a href="https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json" target="_blank">US Atlas</a></div>
+            <div>Data source: <a href="https://www.cdc.gov/heart-disease-stroke-atlas/about/?CDC_AAref_Val=https://www.cdc.gov/dhdsp/maps/atlas/index.htm">Atlas of Heart Disease and Stroke</a></div>
+            <div class="credit">
+                Made with love using&nbsp;
+                <a href="https://d3js.org/" target="_blank">D3.js</a>
+                &nbsp;version 7.9.0
+            </div>
+        </div>
+    </section>
+
+    <!-- Row 2 -->
+
+    <!-- Histogram A -->
+    <section id="histogram-container-a" class="chart-container">
+        <div class="title-container">
+            <div id="histSlotA" class="slot"></div>
+            <span>&nbsp;distribution across U.S. Counties</span>
+        </div>
+        <div id="histogram-a" class="chart"></div>
+    </section>
+
+    <!-- Scatter plot -->
+    <section id="scatter-container" class="chart-container">
+        <div class="title-container">
+            <div id="scatterSlotA" class="slot"></div>
+            <span>&nbsp;vs&nbsp;</span>
+            <div id="scatterSlotB" class="slot"></div>
+            <span>&nbsp;across U.S. Counties</span>
+        </div>
+        <div id="scatterplot" class="chart"></div>
+    </section>
+
+    <!-- Histogram B -->
+    <section id="histogram-container-b" class="chart-container">
+        <div class="title-container">
+            <div id="histSlotB" class="slot"></div>
+            <span>&nbsp;distribution across U.S. Counties</span>
+        </div>
+        <div id="histogram-b" class="chart"></div>
+    </section>
+
+    <!-- Row 3 -->
+    <section id="maps">
+        <div id="choropleth-maps">
+            <!-- Map A -->
+            <div class="map-container">
+                <div id="map-title-a" class="title-container">
+                    <div class="dropdown-arrow">▼</div>
+                    <select name="attribute-dropdown-a"></select>
+                    <span>&nbsp;of all U.S. Counties</span>
+                </div>
+                <div id="choropleth-map-a"></div>
+            </div>
+
+            <!-- Define stripe pattern -->
+            <svg opacity="0" height="0" width="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <pattern id="lightstripe" patternUnits="userSpaceOnUse" width="5" height="5">
+                        <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==" x="0" y="0" width="5" height="5"></image>
+                    </pattern>
+                </defs>
+            </svg>
+
+            <!-- Map B -->
+            <div class="map-container">
+                <div id="map-title-b" class="title-container">
+                    <div class="dropdown-arrow">▼</div>
+                    <select name="attribute-dropdown-b"></select>
+                    <span>&nbsp;of all U.S. Counties</span>
+                </div>
+                <div id="choropleth-map-b"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/choroplethMap.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/scatter.js"></script>
+    <script src="js/visualization.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
