@@ -132,11 +132,11 @@ I use D3.js as the main library for visualization
 
 > #### 4. Run
 
-***Download***: To fork or download this code. Navigate to the [GitHub Repo](https://github.com/)
+***Download***: To fork or download this code. Navigate to the [GitHub Repo](https://github.com/nam-k-nguyen/health-insurance-data-visualization)
 
 ***Local***: To run the code locally, simply open the index.html file in your browser of choice.
 
-***Live Site***: Open the live version of the website here: 
+***Live Site***: Open the live version of the website here: [Data Visualization App](https://health-insurance-data-visualization.vercel.app/)
 
 ## ✅ Challenges and reflection
 
@@ -151,9 +151,6 @@ The future plan for this project consists of the following
 - Optimize code so that it renders even faster.
 - Add filtering by states.
 - Refine the UI: change datum color on hover
-
-
-'challenges' section, where you describe what technical difficulties you encountered while doing this project, and reflect on how you might approach future projects.
 
 > #### 2. Challenges: (mainly brush syncing)
 
@@ -177,9 +174,3 @@ I used AI to
 - Help me generate the boilerplate code for the histogram and the scatterplot, which I then develop upon and fix some small issues.
 - Debug (a lot).
 - Auto-complete my repetive code. GitHub Copilot help me tremendously. As an alternative to typing a similar logic 5 times. I write the code for 1, and press tab 4 times. It does get it wrong ~30% of the time though.
-
-## Demo
-
-Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation. 
-
-Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
