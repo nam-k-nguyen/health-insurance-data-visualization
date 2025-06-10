@@ -100,7 +100,7 @@ Below are the <span style="color: orange">three main ways</span> that you can <s
 
 > #### 1. Data Pre-processing
 
-I upload the files to [Observable HQ](https://observablehq.com/) to handle the data
+I upload the files to [Observable HQ](https://observablehq.com/@js7006/usa-data-visualization-project) to handle the data
 - I parse the attributes "State" and "County" from the "Location" attribute
 - I made a simple scatter plot to see which features I should pick.
 - I filtered the picked feature using code.
